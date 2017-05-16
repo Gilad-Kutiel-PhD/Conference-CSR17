@@ -17,3 +17,14 @@
 \newcommand{\pass}[1]{{\color{\colorPass} #1}}
 \newcommand{\drive}[1]{{\color{red} #1}}
 \newcommand{\match}[1]{{\color{blue} #1}}
+
+\newcommand{\arc}[3]{
+	\draw (#1) -- (#2) node[
+		midway, 
+		draw=none, 
+		fill=white, 
+		inner sep=-2mm,
+		sloped,
+	] {\tiny #3};
+}
+

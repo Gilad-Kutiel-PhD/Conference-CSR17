@@ -8,43 +8,57 @@
 }
 
 \foreach \y in {0.25,.5,...,1}{
-	\draw (6, \y) -- +(1pt, 0) -- +(-4pt, 0) node[anchor=east]{\tiny \y};
+	\draw (6, \y) -- +(1pt, 0) -- +(-3pt, 0) node[anchor=east]{\tiny \y};
 }
 
 \begin{filecontents}{data-upper.txt}
-7	0.996153846
-8	0.95
-9	0.91
+7 0.996153846
+8 0.95
+9 0.91
 \end{filecontents}
 
 \begin{filecontents}{data-unweight.txt}
-7	0.6
-8	0.71
-9	0.804
+7 0.6
+8 0.71
+9 0.804
 \end{filecontents}
 
 \begin{filecontents}{data-weight-vertex.txt}
-8	0.64
-9	0.64
+8 0.64
+9 0.64
 \end{filecontents}
 
 \begin{filecontents}{data-weight-edge.txt}
-7	0.5
-8	0.5
-9	0.5
+7 0.5
+8 0.5
+9 0.5
 \end{filecontents}
 
+\tikzset{upper/.style={mark=*, mark options={fill=red}}}
+\tikzset{unweight/.style={mark=triangle*, mark options={fill=blue}}}
+\tikzset{weight-vertex/.style={mark=square*, mark options={fill=cyan}}}
+\tikzset{weight-edge/.style={mark=diamond*, mark options={fill=green}}}
+
+\draw plot[upper] file {data-upper.txt};
+\draw plot[unweight] file {data-unweight.txt};
+\draw plot[weight-vertex] file {data-weight-vertex.txt}; 
+\draw plot[weight-edge] file {data-weight-edge.txt};
+
+
 \draw 
-plot[mark=*, mark options={fill=red}] 
-file {data-upper.txt};
-\draw 
-plot[mark=triangle*, mark options={fill=blue}] 
-file {data-unweight.txt};
-\draw 
-plot[mark=square*, mark options={fill=magenta}] 
-file {data-weight-vertex.txt}; 
-\draw 
-plot[mark=triangle*, mark options={fill=green}] 
-file {data-weight-edge.txt};
+plot[upper] (10,1.2) -- +(-5pt,0) -- +(5pt,0) 
+node[right]{\tiny Upper Bound};
+
+\draw[yshift=-\baselineskip] 
+plot[unweight] (10,1.2) -- +(-5pt,0) -- +(5pt,0) 
+node[right]{\tiny Unweighted};
+
+\draw[yshift=-2\baselineskip] 
+plot[weight-vertex] (10,1.2) -- +(-5pt,0) -- +(5pt,0) 
+node[right]{\tiny Vertex Weighted};
+
+\draw[yshift=-3\baselineskip] 
+plot[weight-edge] (10,1.2) -- +(-5pt,0) -- +(5pt,0) 
+node[right]{\tiny Edge Weighted};
 
 \end{tikzpicture}
