@@ -1,0 +1,40 @@
+\newcommand{\arc}[3]{
+	\draw (#1) -- (#2) node[
+		midway, 
+		draw=none, 
+		fill=white, 
+		inner sep=-2mm,
+		sloped,
+	] {\small #3};
+}
+
+\begin{tikzpicture}[every node/.style={default node}, ->, very thick]
+
+\begin{scope}[every node/.append style={\colorPass}]
+\node(1) at(-2,0) {1};
+\node(2) at(-1,2) {2};
+\node(3) at(1,2) {1};
+\node(4) at(2,0) {4};
+\node[\colorDrive](5) at(1,-2) {3};
+\node(6) at(-1,-2) {2};
+\node[\colorDrive](7) at(0,0) {3};
+\end{scope}
+
+\begin{scope}[\colorMatch]
+\arc{1}{7}{2}
+\arc{2}{7}{3}
+\arc{3}{7}{4}
+
+\arc{4}{5}{3}
+\arc{6}{5}{2}
+\end{scope}
+%
+\arc{7}{6}{1}
+\arc{7}{4}{2}
+\arc{6}{1}{1}
+\arc{4}{3}{2}
+\arc{5}{7}{2}
+\arc{2}{1}{1}
+\arc{3}{2}{1}
+
+\end{tikzpicture}

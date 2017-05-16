@@ -1,0 +1,43 @@
+\begin{frame}
+\begin{itemize}
+  \item A group of people want to carpool from point A to point B
+  \item Who should be the drivers ?
+  \item Who should they give ride to ?
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}
+\node(w1) at(0,0) {\Huge\faFemale};
+\node(w2) at(2,2) {\Huge\faFemale};
+\node(m) at(4,0) {\Huge\faMale};
+
+\draw[->] 
+(w1) to[bend right] node[label below]{\faSmileO\faSmileO\faSmileO} 
+(w2);
+
+\draw[->] 
+(w2) to[bend right] node[label above]{\faSmileO\faSmileO} 
+(w1);
+
+\draw[->] 
+(m) to[bend left] node[label below]{\faSmileO\faSmileO} 
+(w1);
+
+\draw[->] 
+(w2) to[bend right] node[label below]{\faSmileO} 
+(m);
+
+\draw[->] 
+(m) to[bend right] node[label above]{\faSmileO\faSmileO\faSmileO} 
+(w2);
+
+\node[below left=-2mm of w1] {\faCar};
+\node[below right=-2mm of m] {\faCar};
+\node[above=1mm of w2] {\faMotorcycle};
+
+
+
+\end{tikzpicture}
+\end{center}
+
+\end{frame}

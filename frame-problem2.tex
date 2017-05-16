@@ -1,0 +1,32 @@
+\begin{frame}
+\begin{columns}
+
+\begin{column}{.45\textwidth}
+\textbf{Input: $(G, w, c)$}
+\begin{itemize}
+\item $G=(V,E)$
+\item $w:E \to \R_+$
+\item $c:V \to \N$
+\end{itemize}
+
+\textbf{Matching:} $(\pass{P}, \drive{D}, \match{M})$
+
+\begin{itemize}
+\item $P \cap D = \emptyset$, $P \cup D = V$
+\item $M \subseteq E \cap P \times D$
+\item $\forall p \in P, \dout(p) \leq 1$
+\item $\forall d \in D, \din(d) \leq c(d)$
+\end{itemize}
+\end{column}
+
+\begin{column}{.55\textwidth}
+\centering
+\input{fig-problem2}
+\end{column}
+\end{columns}
+
+\vfill
+We seek for a matching that maximizes
+$$w(M) = \sum_{e \in M}{w(e)}$$
+
+\end{frame}
