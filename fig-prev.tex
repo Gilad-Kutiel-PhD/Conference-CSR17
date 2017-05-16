@@ -1,0 +1,50 @@
+\begin{tikzpicture}[y=50mm, x=15mm]
+
+\draw (6,-5pt) -- (6,1.1) node[anchor=south]{Ratio};
+\draw (5,0) -- (11,0) node[anchor=west]{Year};
+
+\foreach \x in {6,...,10}{
+	\draw (\x, 1pt) -- (\x, -3pt) node[anchor=north]{\tiny \x};
+}
+
+\foreach \y in {0.25,.5,...,1}{
+	\draw (6, \y) -- +(1pt, 0) -- +(-4pt, 0) node[anchor=east]{\tiny \y};
+}
+
+\begin{filecontents}{data-upper.txt}
+7	0.996153846
+8	0.95
+9	0.91
+\end{filecontents}
+
+\begin{filecontents}{data-unweight.txt}
+7	0.6
+8	0.71
+9	0.804
+\end{filecontents}
+
+\begin{filecontents}{data-weight-vertex.txt}
+8	0.64
+9	0.64
+\end{filecontents}
+
+\begin{filecontents}{data-weight-edge.txt}
+7	0.5
+8	0.5
+9	0.5
+\end{filecontents}
+
+\draw 
+plot[mark=*, mark options={fill=red}] 
+file {data-upper.txt};
+\draw 
+plot[mark=triangle*, mark options={fill=blue}] 
+file {data-unweight.txt};
+\draw 
+plot[mark=square*, mark options={fill=magenta}] 
+file {data-weight-vertex.txt}; 
+\draw 
+plot[mark=triangle*, mark options={fill=green}] 
+file {data-weight-edge.txt};
+
+\end{tikzpicture}
