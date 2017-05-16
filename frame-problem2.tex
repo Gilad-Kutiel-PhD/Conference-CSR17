@@ -1,11 +1,11 @@
-\begin{frame}
+\begin{frame}{Formal Definition}
 \begin{columns}
 
 \begin{column}{.45\textwidth}
-\textbf{Input: $(G, w, c)$}
+\textbf{Input: $(D, w, c)$}
 \begin{itemize}
-\item $G=(V,E)$
-\item $w:E \to \R_+$
+\item $D=(V,A)$
+\item $w:A \to \R_+$
 \item $c:V \to \N$
 \end{itemize}
 
@@ -13,7 +13,7 @@
 
 \begin{itemize}
 \item $P \cap D = \emptyset$, $P \cup D = V$
-\item $M \subseteq E \cap P \times D$
+\item $M \subseteq A \cap P \times D$
 \item $\forall p \in P, \dout(p) \leq 1$
 \item $\forall d \in D, \din(d) \leq c(d)$
 \end{itemize}
