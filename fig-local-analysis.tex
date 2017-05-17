@@ -1,32 +1,57 @@
 \begin{tikzpicture}[very thick]
 
-\begin{scope}[every node/.append style={red}]
-\node(1) at(0:2){1};
-\node(3) at(120:2){3};
-\node(6) at(300:2){6};
+\begin{scope}[nodes unmatched]
+\node(1) at(0:2){};
+\node(3) at(120:2){};
+\node(6) at(300:2){};
 \end{scope}
 
-\node(2) at(60:2){2};
-\node(4) at(180:2){4};
-\node(5) at(240:2){5};
-\node(7) at(90:1){7};
-\node(8) at(210:1){8};
-\node(9) at(330:1){9};
+\begin{scope}[
+	nodes pass, 
+	hide nodes text,
+	on=<2->{show nodes text},
+]
+\node(2) at(60:2){\alt<-3>{1\$}{?}};
+\node(4) at(180:2){\alt<-3>{1\$}{?}};
+\node(5) at(240:2){\alt<-3>{1\$}{?}};
+\node(9) at(330:1){\alt<-3,8-9>{1\$}{?}};
+\node(10) at(210:2){\alt<-3>{1\$}{?}};
+\end{scope}
 
-\begin{scope}[\colorMatch]
+\begin{scope}[
+	nodes drive, 
+	hide nodes text,
+	on=<2->{show nodes text},
+]
+\node(7) at(90:1){\alt<-3>{2\$}{?}};
+\node(8) at(210:1){\alt<-3>{3\$}{?}};
+\end{scope}
+
+\begin{scope}[match, on=<3->{white}]
 \arc{2}{7}
 \arc{5}{8}
 \arc{9}{7}
 \arc{4}{8}
+\arc{10}{8}
 \end{scope}
 
-\begin{scope}[dashed]
+\begin{scope}[dashed, white]
+\begin{scope}[on=<7>{black}]
 \arc{6}{1}
+\end{scope}
 
+\begin{scope}[on=<8-9>{black}]
 \arc{1}{9}
-\arc{6}{9}
+\end{scope}
 
+\begin{scope}[on=<9>{black}]
+\arc{6}{9}
+\end{scope}
+
+\begin{scope}[on=<10>{black}]
 \arc{3}{7}
+\end{scope}
+
 \end{scope}
 
 

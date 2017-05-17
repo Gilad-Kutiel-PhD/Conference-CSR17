@@ -23,7 +23,10 @@ label below/.style={label, below},
 label above/.style={label, above},
 }
 
-\tikzset{blur/.style={black!10}}
+\tikzset{
+	blur/.style={black!10},
+	match/.style={\colorMatch},
+}
 
 \tikzset{default node/.style={
 	draw, 
@@ -48,11 +51,14 @@ label above/.style={label, above},
 	show nodes text/.style={
 		every node/.append style={text=black}
 	},
-	nodes pass/.append style={
+	nodes pass/.style={
 		every node/.append style={\colorPass}
 	},
-	nodes drive/.append style={
+	nodes drive/.style={
 		every node/.append style={\colorDrive}
+	},
+	nodes unmatched/.style={
+		every node/.append style={dashed}
 	},
 }
 

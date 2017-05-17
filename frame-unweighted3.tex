@@ -1,23 +1,17 @@
 \begin{frame}{Unweighted Graphs (Analysis)}
 \begin{columns}
-	\begin{column}{.5\textwidth}
-	\begin{itemize}
-	  \item Load every arc with 2\$
-	  \item One for the passenger and one for the driver
-	  \item Each passenger gets 1\$
-	  \item Each driver gets 1\$ from each passenger
-	  \item Unmatched vertices get 0\$
-	\end{itemize}
-	\begin{itemize}
-	  \item Consider another solution
-	  \item Each vertex pays for the the outgoing arc
-	  \item Arcs from unmatched vertices are payed by their destination vertex
-	  \item It can be done 
-	\end{itemize}
-	\end{column}
-	\begin{column}{.5\textwidth}
-	\centering
-	\input{fig-local-analysis}
-	\end{column}
+\begin{column}{.5\textwidth}
+\begin{itemize}
+  \item<1> Load every arc with 2\$
+  \item<3> Consider another solution
+  \item<4> Each vertex pays for its outgoing arc
+  \item<5> Left with outgoing arcs from unmatched vertices 
+  \item<6> Can be paid by their destination 
+\end{itemize}
+\end{column}
+\begin{column}{.5\textwidth}
+\centering
+\input{fig-local-analysis}
+\end{column}
 \end{columns}
 \end{frame}
