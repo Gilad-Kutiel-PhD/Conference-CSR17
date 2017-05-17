@@ -23,7 +23,7 @@ label below/.style={label, below},
 label above/.style={label, above},
 }
 
-\tikzset{blur/.style={black!20, thin}}
+\tikzset{blur/.style={black!10}}
 
 \tikzset{default node/.style={
 	draw, 
@@ -34,6 +34,21 @@ label above/.style={label, above},
 	font=\small,
 	black!70,
 }}
+
+\tikzset{
+	hide nodes/.style={
+		every node/.append style={opacity=0}
+	},
+	hide nodes text/.style={
+		every node/.append style={text=white}
+	},
+	show nodes/.style={
+		every node/.append style={opacity=1}
+	},
+	show nodes text/.style={
+		every node/.append style={text=black}
+	}
+}
 
 \tikzset{
 	>=latex,
