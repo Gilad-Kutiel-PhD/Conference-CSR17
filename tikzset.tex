@@ -4,6 +4,12 @@
 }
 
 \tikzset{
+	on/.code args={<#1>#2}{
+  		\only<#1>{\pgfkeysalso{#2}}
+	},
+}
+
+\tikzset{
 label/.style={
 	midway,
 	sloped,
