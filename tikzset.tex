@@ -1,20 +1,21 @@
 \usetikzlibrary{
 	positioning,
 	plotmarks,
-	calc,
 }
 
-\tikzset{label/.style={
+\tikzset{
+label/.style={
 	midway,
 	sloped,
 	draw=none,
 	fill=white,
 	inner sep=1pt,
-	minimum height=7pt,
-	minimum width=7pt,
-}}
-\tikzset{label below/.style={label, below}}
-\tikzset{label above/.style={label, above}}
+	minimum height=0,
+	minimum width=0,
+},
+label below/.style={label, below},
+label above/.style={label, above},
+}
 
 \tikzset{blur/.style={black!20, thin}}
 
