@@ -2,9 +2,24 @@
 	-,
 	very thick,
 	level/.style={sibling distance=40mm/#1},	
-	level 1/.append style={red},
-	level 2/.append style={blue},
-	level 3/.append style={red},
+	on=<3>{
+		level 1/.append style={red},
+		level 3/.append style={red},
+	},
+	on=<3>{
+		level 2/.append style={blur},
+	},
+	on=<4->{
+		level 2/.append style={blue},
+	},
+	on=<4>{
+		level 1/.append style={blur},
+		level 3/.append style={blur},
+	},
+	on=<5->{
+		level 1/.append style={red},
+		level 3/.append style={red},
+	},
 ]
 
 \newcommand{\Tag}{
