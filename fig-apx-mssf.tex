@@ -1,0 +1,45 @@
+\begin{tikzpicture}[
+	every node/.style={default node}, 
+	thick,
+	level/.style={sibling distance=40mm/#1},	
+	level 1/.append style={red},
+	level 2/.append style={blue},
+	level 3/.append style={red},
+]
+
+\newcommand{\Tag}[1]{
+edge from parent node[midway, draw=none, fill=white]{\small #1}
+}
+
+\node(1) at(0,0){}
+	child {
+		node{} 
+		child {node{}
+			child {node{} \Tag{4}}
+			\Tag{3}
+		}
+		child {node{}
+			child {node{} \Tag{1}}
+			child {node{} \Tag{5}}
+			\Tag{2}
+		}
+		child {node{} \Tag{6}}
+		\Tag{1}
+	}
+	child {
+		node {} 
+		child {node{}
+			child {node{} \Tag{1}}
+			child {node{} \Tag{2}}
+			child {node{} \Tag{3}}
+			\Tag{2}
+		}
+		child {node{}
+			child {node{} \Tag{4}}
+			\Tag{2}
+		}
+		\Tag{2}
+	}
+;
+
+\end{tikzpicture}
