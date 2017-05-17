@@ -1,0 +1,31 @@
+\begin{tikzpicture}[
+	y=10mm,
+	x=10mm,
+]
+\node(1) at(0:2){1};
+\node(2) at(60:2){2};
+\node(3) at(120:2){3};
+\node(4) at(180:2){4};
+\node(5) at(240:2){5};
+\node(6) at(300:2){6};
+
+\node(7) at(90:1){7};
+\node(8) at(210:1){8};
+\node(9) at(330:1){9};
+
+\arc{1}{2}
+\arc{1}{9}
+\arc{2}{7}
+\arc{3}{2}
+\arc{3}{7}
+\arc{4}{3}
+\arc{5}{6}
+\arc{5}{8}
+\arc{6}{9}
+\arc{6}{1}
+\arc{7}{8}
+\arc{8}{4}
+\arc{8}{9}
+\arc{9}{7}
+
+\end{tikzpicture}
