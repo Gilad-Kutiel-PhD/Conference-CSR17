@@ -25,9 +25,13 @@
 		midway, 
 		draw=none, 
 		fill=white, 
-		inner sep=-2mm,
+		inner sep=0,
 		sloped,
-	] {\tiny #1};
+		minimum height=7pt,
+		minimum width=7pt,
+		font=\tiny,
+		circle,
+	] {#1};
 }
 \def\@arcuw#1#2{
 	\draw (#1) -- (#2);
