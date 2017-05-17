@@ -18,13 +18,19 @@
 \newcommand{\drive}[1]{{\color{red} #1}}
 \newcommand{\match}[1]{{\color{blue} #1}}
 
-\newcommand{\arc}[3]{
-	\draw (#1) -- (#2) node[
+\makeatletter
+\def\arc{\@ifnextchar[{\@arcw}{\@arcuw}}
+\def\@arcw[#1]#2#3{
+	\draw (#2) -- (#3) node[
 		midway, 
 		draw=none, 
 		fill=white, 
 		inner sep=-2mm,
 		sloped,
-	] {\tiny #3};
+	] {\tiny #1};
 }
+\def\@arcuw#1#2{
+	\draw (#1) -- (#2);
+}
+\makeatother
 
