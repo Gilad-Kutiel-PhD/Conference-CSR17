@@ -47,7 +47,13 @@ label above/.style={label, above},
 	},
 	show nodes text/.style={
 		every node/.append style={text=black}
-	}
+	},
+	nodes pass/.append style={
+		every node/.append style={\colorPass}
+	},
+	nodes drive/.append style={
+		every node/.append style={\colorDrive}
+	},
 }
 
 \tikzset{
