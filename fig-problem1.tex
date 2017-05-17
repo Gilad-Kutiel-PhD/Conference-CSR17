@@ -1,0 +1,32 @@
+\begin{tikzpicture}[every node/.style={draw=none}]
+\node(w1) at(0,0) {\Huge\faFemale};
+\node(w2) at(2,2) {\Huge\faFemale};
+\node(m) at(4,0) {\Huge\faMale};
+
+\draw[->] 
+(w1) to[bend right] node[label]{\faSmileO\faSmileO\faSmileO} 
+(w2);
+
+\draw[->] 
+(w2) to[bend right] node[label]{\faSmileO\faSmileO} 
+(w1);
+
+\draw[->] 
+(m) to[bend left] node[label]{\faSmileO\faSmileO} 
+(w1);
+
+\draw[->] 
+(w2) to[bend right] node[label]{\faSmileO} 
+(m);
+
+\draw[->] 
+(m) to[bend right] node[label]{\faSmileO\faSmileO\faSmileO} 
+(w2);
+
+\node[below left=-2mm of w1] {\faCar};
+\node[below right=-2mm of m] {\faCar};
+\node[above=1mm of w2] {\faMotorcycle};
+
+
+
+\end{tikzpicture}

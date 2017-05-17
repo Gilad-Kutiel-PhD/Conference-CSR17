@@ -22,15 +22,8 @@
 \def\arc{\@ifnextchar[{\@arcw}{\@arcuw}}
 \def\@arcw[#1]#2#3{
 	\draw (#2) -- (#3) node[
-		midway, 
-		draw=none, 
-		fill=white, 
-		inner sep=0,
-		sloped,
-		minimum height=7pt,
-		minimum width=7pt,
+		label,
 		font=\tiny,
-		circle,
 	] {#1};
 }
 \def\@arcuw#1#2{
