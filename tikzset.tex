@@ -1,6 +1,7 @@
 \usetikzlibrary{
 	positioning,
 	plotmarks,
+	shapes.callouts,	
 }
 
 \tikzset{
@@ -10,6 +11,10 @@
 	alt/.code args={<#1>#2#3}{
   		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}
 	},
+}
+
+\tikzset{
+	note/.style={rectangle callout, fill=#1}
 }
 
 \tikzset{
@@ -43,14 +48,20 @@ label above/.style={label, above},
 }}
 
 \tikzset{
+	hide/.style={
+		opacity=0
+	},
+	show/.style={
+		opacity=1
+	},
 	hide nodes/.style={
-		every node/.append style={opacity=0}
+		every node/.append style={hide}
 	},
 	hide nodes text/.style={
 		every node/.append style={text=white}
 	},
 	show nodes/.style={
-		every node/.append style={opacity=1}
+		every node/.append style={show}
 	},
 	show nodes text/.style={
 		every node/.append style={text=black}
