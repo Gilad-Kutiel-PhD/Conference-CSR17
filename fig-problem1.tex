@@ -6,27 +6,27 @@
 \node(m) at(4,0) {\Huge\faMale};
 
 \onslide<5->
-\draw[->] 
+\draw[->, on=<9>{white}] 
 (w1) to[bend right] node[label]{\faSmileO\faSmileO\faSmileO} 
 (w2);
 
-\draw[->] 
+\draw[->, on=<6-7>{white}] 
 (w2) to[bend right] node[label]{\faSmileO\faSmileO} 
 (w1);
 
-\draw[->] 
+\draw[->, on=<6-7>{white}] 
 (m) to[bend left] node[label]{\faSmileO\faSmileO} 
 (w1);
 
-\draw[->] 
+\draw[->, on=<{6-7,9-}>{white}] 
 (w2) to[bend right] node[label]{\faSmileO} 
 (m);
 
-\draw[->] 
+\draw[->, on=<9>{white}] 
 (m) to[bend right] node[label]{\faSmileO\faSmileO\faSmileO} 
 (w2);
 
-\onslide<6->
+\onslide<7->
 \node[below left=-2mm of w1] {\faCar};
 \node[below right=-2mm of m] {\faCar};
 \node[above=1mm of w2] {\faMotorcycle};
