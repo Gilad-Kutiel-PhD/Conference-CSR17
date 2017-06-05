@@ -1,17 +1,11 @@
-\begin{frame}{Unweighted Graphs (Analysis)}
-\begin{columns}
-\begin{column}{.5\textwidth}
+\begin{frame}{Unweighted MCM (Analysis)}
 \begin{itemize}
   \item<1> Load every arc with 2\$
   \item<3> Consider another solution
-  \item<4> Each vertex pays for its outgoing arc (if exists)
-  \item<5> Left with outgoing arcs from unmatched vertices 
-  \item<6> Can be paid by their destination 
+  \item<4> Each vertex pays (if it can) for its outgoing arc (if exists)
+  \item<6> Left with outgoing arcs from unmatched vertices 
+  \item<7> Can be paid by their destination 
 \end{itemize}
-\end{column}
-\begin{column}{.5\textwidth}
 \centering
 \input{fig-local-analysis}
-\end{column}
-\end{columns}
 \end{frame}

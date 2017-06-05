@@ -1,11 +1,13 @@
 \begin{tikzpicture}[very thick]
 
+% UNMATCHED 
 \begin{scope}[nodes unmatched]
 \node(1) at(0:2){};
 \node(3) at(120:2){};
 \node(6) at(300:2){};
 \end{scope}
 
+% PASSENGERS 
 \begin{scope}[
 	nodes pass, 
 	hide nodes text,
@@ -14,10 +16,11 @@
 \node(2) at(60:2){\alt<-3>{1\$}{?}};
 \node(4) at(180:2){\alt<-3>{1\$}{?}};
 \node(5) at(240:2){\alt<-3>{1\$}{?}};
-\node(9) at(330:1){\alt<-3,8-9>{1\$}{?}};
+\node(9) at(330:1){\alt<-3,9-10>{1\$}{?}};
 \node(10) at(210:2){\alt<-3>{1\$}{?}};
 \end{scope}
 
+% DRIVERS 
 \begin{scope}[
 	nodes drive, 
 	hide nodes text,
@@ -26,6 +29,18 @@
 \node(7) at(90:1){\alt<-3>{2\$}{?}};
 \node(8) at(210:1){\alt<-3>{3\$}{?}};
 \end{scope}
+
+% DUMMY 
+\begin{scope}[every node/.style={draw=none}]
+\node(11) at(180:3.5){};
+\node(12) at(0,0){};
+\end{scope}
+
+\onslide<5-6>{
+\arc[X]{4}{11}
+\arc[X]{8}{12}
+}
+
 
 \begin{scope}[match, on=<3->{white}]
 \arc{2}{7}
@@ -36,19 +51,19 @@
 \end{scope}
 
 \begin{scope}[dashed, white]
-\begin{scope}[on=<7>{black}]
+\begin{scope}[on=<8>{black}]
 \arc{6}{1}
 \end{scope}
 
-\begin{scope}[on=<8-9>{black}]
+\begin{scope}[on=<9-10>{black}]
 \arc{1}{9}
 \end{scope}
 
-\begin{scope}[on=<9>{black}]
+\begin{scope}[on=<10>{black}]
 \arc{6}{9}
 \end{scope}
 
-\begin{scope}[on=<10>{black}]
+\begin{scope}[on=<11>{black}]
 \arc{3}{7}
 \end{scope}
 
