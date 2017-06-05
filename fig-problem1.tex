@@ -1,32 +1,32 @@
 \begin{tikzpicture}[every node/.style={draw=none}]
 
-\onslide<4->
+\onslide<+->
 \node(w1) at(0,0) {\Huge\faFemale};
 \node(w2) at(2,2) {\Huge\faFemale};
 \node(m) at(4,0) {\Huge\faMale};
 
-\onslide<5->
-\draw[->, on=<9>{white}] 
+\onslide<+->
+\draw[->, on=<.(4)>{white}] 
 (w1) to[bend right] node[label]{\faSmileO\faSmileO\faSmileO} 
 (w2);
 
-\draw[->, on=<6-7>{white}] 
+\draw[->, on=<.(1)-.(2)>{white}] 
 (w2) to[bend right] node[label]{\faSmileO\faSmileO} 
 (w1);
 
-\draw[->, on=<6-7>{white}] 
+\draw[->, on=<.(1)-.(2)>{white}] 
 (m) to[bend left] node[label]{\faSmileO\faSmileO} 
 (w1);
 
-\draw[->, on=<{6-7,9-}>{white}] 
+\draw[->, on=<{.(1)-.(2), .(4)-}>{white}] 
 (w2) to[bend right] node[label]{\faSmileO} 
 (m);
 
-\draw[->, on=<9>{white}] 
+\draw[->, on=<.(4)>{white}] 
 (m) to[bend right] node[label]{\faSmileO\faSmileO\faSmileO} 
 (w2);
 
-\onslide<7->
+\onslide<.(2)->
 \node[below left=-2mm of w1] {\faCar};
 \node[below right=-2mm of m] {\faCar};
 \node[above=1mm of w2] {\faMotorcycle};

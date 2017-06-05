@@ -3,20 +3,20 @@
 
 \begin{column}{.45\textwidth}
 \textbf{Input: $(D, w, c)$}
-\begin{itemize}
-\item<1> $D=(V,A)$
-\item<2> $w:A \to \R_+$
-\item<3> $c:V \to \N$
+\begin{itemize}[<+>]
+\item $D=(V,A)$
+\item $w:A \to \R_+$
+\item $c:V \to \N$
 \end{itemize}
 
-\onslide<4->{
+\onslide<+->{
 \textbf{Matching:} $(\pass{P}, \drive{D}, \match{M})$
 
-\begin{itemize}
-\item<5> $P \cap D = \emptyset$, $P \cup D = V$
-\item<6> $M \subseteq A \cap (P \times D)$
-\item<7> $\forall p \in P, \dout(p) \leq 1$
-\item<8> $\forall d \in D, \din(d) \leq c(d)$
+\begin{itemize}[<+>]
+\item $P \cap D = \emptyset$, $P \cup D = V$
+\item $M \subseteq A \cap (P \times D)$
+\item $\forall p \in P, \dout(p) \leq 1$
+\item $\forall d \in D, \din(d) \leq c(d)$
 \end{itemize}
 }
 \end{column}

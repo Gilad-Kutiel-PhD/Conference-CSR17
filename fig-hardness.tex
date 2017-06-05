@@ -1,25 +1,25 @@
 \begin{tikzpicture}[-, very thick]
 
-\begin{scope}[on=<5->{nodes drive}]
+\begin{scope}[on=<6->{nodes drive}]
 \node(1) at(0,0) {};
 \node(4) at(3,1) {};
 \end{scope}
 
-\begin{scope}[on=<6->{nodes pass}]
+\begin{scope}[on=<7->{nodes pass}]
 \node(2) at(1,1) {};
 \node(3) at(1,-1) {};
 \node(5) at(3,-1) {};
 \node(6) at(5,1) {};
 \end{scope}
 
-\begin{scope}[on=<7->{match}]
+\begin{scope}[on=<8->{match}]
 \arc{1}{2}
 \arc{1}{3}
 \arc{4}{5}
 \arc{4}{6}
 \end{scope}
 
-\begin{scope}[on=<7->{blur}]
+\begin{scope}[on=<8->{blur}]
 \arc{2}{3}
 \arc{2}{4}
 \arc{3}{5}
