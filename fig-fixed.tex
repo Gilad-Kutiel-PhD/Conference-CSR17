@@ -1,6 +1,6 @@
 \begin{tikzpicture}[very thick]
 
-\begin{scope}[on=<2->{nodes pass}]
+\begin{scope}[on=<+->{nodes pass}]
 \node(3) at( 1, 1){2};
 \node(5) at( 3, 1){1};
 \node(6) at(-1,-1){2};
@@ -8,7 +8,7 @@
 \node(8) at( 0, 2){1};
 \end{scope}
 
-\begin{scope}[on=<2->{nodes drive}]
+\begin{scope}[on=<.->{nodes drive}]
 \node(1) at( 0, 0){1};
 \node(2) at( 2, 0){2};
 \node(4) at( 1,-1){3};
@@ -22,7 +22,7 @@
 \arc[1]{7}{4}
 \arc[3]{8}{1}
 
-\begin{scope}[on=<3->{blur, hide nodes}]
+\begin{scope}[on=<+->{blur, hide nodes}]
 \arc[1]{1}{4}
 \arc[2]{4}{3}
 \arc[3]{4}{2}
@@ -31,7 +31,7 @@
 \arc[2]{8}{3}
 \end{scope}
 
-\onslide<4->
+\onslide<+->
 \node(s) at(4,0){s};
 \node(t) at(10,0){t};
 
@@ -51,7 +51,7 @@
 \end{scope}
 
 \draw[dashed, thin] (7) to[out=10, in=190] (p5);
-\draw[dashed, thin] (4) to[out=-90, in=-90] (d3);
+\draw[dashed, thin] (4) to[out=-80, in=-120] (d3);
 
 \newcommand{\flow}[4]{
 \draw (#1) -- (#2) 
